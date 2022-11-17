@@ -1,0 +1,89 @@
+#wine_head{
+     .wine_items{
+          .wine{
+               width: 400px;
+               .wine_img{
+                    width:400px ;
+                    height: 500px;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    &:hover{
+                         .overlay_wine{
+                              opacity: 1;
+                         }
+                         .social_wine{
+                              opacity: 1;
+                         }
+                    }
+                    img{
+                         width: 100%;
+                         height: 100%;
+                         object-fit: cover;
+                         object-position: center;
+                    }
+                    .overlay_wine{
+                         width: 100%;
+                         height: 100%;
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         right: 0;
+                         opacity: 0;
+                         transition: .4s ease-in-out;
+                        
+                         img{
+                               width:400px ;
+                              height: 500px;
+                         }
+                    }
+                    .social_wine{
+                         position: absolute;
+                         top: 0;
+                         right: 0;
+                         left: 0;
+                         width: 100%;
+                         background-color: rgba(128, 128, 128, 0.379);
+                         height: 100%;
+                         display: flex;
+                         justify-content: flex-end;
+                         align-items: center;
+                         transition: .4s ease-in-out;
+                         opacity: 0;
+                         &:hover{
+                              ul{
+                                   transform: translateX(0);
+                              }
+                         }
+                         ul{
+                              display: flex;
+                              
+                              margin: 0;
+                              padding: 0 20px;
+                              flex-direction: column;
+                              gap: 15px;
+                              transform: translateX(100px);
+                              transition: .3s ease-in-out;
+                              li{
+                                   text-decoration: none;
+                                   width: 40px;
+                                   height: 40px;
+                                   
+                                   background-color: white;
+                                   display: flex;
+                                   justify-content: center;
+                              align-items: center; 
+                                   i{
+                                        font-size: 17px;
+                                      color: #c1001c;
+
+                                   }
+                                  
+                              }
+
+                         }
+                    }
+               }
+          }
+     }
+}
